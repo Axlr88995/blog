@@ -20,3 +20,6 @@ Route::resource('posts','PostsController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/login/{social}', 'Auth\LoginController@socialLogin')->where('social',"google|facebook|twitter|github|linkedin");
+Route::get('/login/{social}/redirect/callback', 'Auth\LoginController@handleProviderCallback')->where('social',"google|facebook|twitter|github|linkedin");

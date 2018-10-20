@@ -15,8 +15,11 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
+                                @if(empty($name))
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}"
-                                    required autofocus> @if ($errors->has('name'))
+                                    required autofocus> @else
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ $name }}"
+                                    required autofocus> @endif @if ($errors->has('name'))
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span> @endif
@@ -27,8 +30,11 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
+                                @if(empty($email))
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}"
-                                    required> @if ($errors->has('email'))
+                                    required autofocus> @else
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email }}"
+                                    required autofocus> @endif @if ($errors->has('email'))
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span> @endif
@@ -62,6 +68,43 @@
                                 </button>
                             </div>
                         </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-block btn-social" href="{{url('login/google')}}">
+                                                                                           Register with GOOGLE
+                                                                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-block btn-social" href="{{url('login/github')}}">
+                                                                                             OR GITHUB
+                                                                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-block btn-social" href="{{url('login/facebook')}}">
+                                                                                             OR facebook
+                                                                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-block btn-social" href="{{url('login/twitter')}}">
+                                                                                            OR Twitter
+                                                                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-block btn-social" href="{{url('login/linkedin')}}">
+                                                                                          OR LinkedIn
+                                </a>
+                            </div>
+                        </div>
+
                     </form>
                 </div>
             </div>

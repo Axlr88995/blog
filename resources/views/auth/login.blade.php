@@ -58,7 +58,47 @@
                                 </a>
                             </div>
                         </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-block btn-social" href="{{url('login/google')}}">
+                                                                    Sign in with GOOGLE
+                                                        </a>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-block btn-social" href="{{url('login/github')}}">
+                                                                    OR GITHUB
+                                                        </a>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-block btn-social" href="{{url('login/facebook')}}">
+                                                                   OR facebook
+                                                        </a>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-block btn-social" href="{{url('login/twitter')}}">
+                                                                   OR Twitter
+                                                        </a>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <a class="btn btn-block btn-social" href="{{url('login/linkedin')}}">
+                                             OR LinkedIn
+                                                        </a>
+                            </div>
+                        </div>
                     </form>
+                </div>
+
+                <div>
+
                 </div>
             </div>
         </div>
