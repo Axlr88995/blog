@@ -12,7 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    <script src="https://cdn.ckeditor.com/4.10.1/standard/ckeditor.js"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -24,15 +24,10 @@
 <body>
     <div id="app">
     @include('inc.navbar')
-
         <div class="container">
     @include('inc.messages') @yield('content')
         </div>
-
     </div>
-
-
-
 </body>
 
 </html>

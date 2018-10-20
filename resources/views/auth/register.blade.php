@@ -1,5 +1,6 @@
 @extends('layout.app') 
 @section('content')
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
